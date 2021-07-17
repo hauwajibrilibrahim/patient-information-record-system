@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Title-->
+    <title>Patient Information Record System</title>
+    <!-- CSS File-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <center>
+      <h2>Patient Information Records</h2>
+    </center>
+    <!--Table-->
+    <table>
+      <!--Row-1-->
+      <tr>
+        <!--Column-1-->
+        <td>
+          <!--Form-->
+          <form
+            onsubmit="event.preventDefault();onFormSubmit();"
+            autocomplete="off"
+          >
+            <h3>Patient Information Form</h3>
+            <!--div-1-->
+            <div>
+              <label>Patient Name</label>
+              <!--Validation Error-->
+              <label class="validation-error hide" id="userNamevalidationError"
+                >This field is required</label
+              >
+              <!--Input User Name-->
+              <input
+                type="text"
+                name="userName"
+                id="userName"
+                placeholder="Enter the user Name"
+              />
+            </div>
+            <!--div-2-->
+            <div>
+              <label>Age</label>
+              <!--Validation Error-->
+              <label class="validation-error hide" id="agevalidationError"
+                >This field is required</label
+              >
+              <!--Input Age-->
+              <input
+                type="number"
+                name="age"
+                id="age"
+                placeholder="Enter the Age"
+              />
+            </div>
+            <!--div-3-->
+            <div>
+              <label>ID Number</label>
+              <!--Validation Error-->
+              <label class="validation-error hide" id="idNovalidationError"
+                >This field is required</label
+              >
+              <!--Input ID No-->
+              <input
+                type="text"
+                name="idNo"
+                id="idNo"
+                placeholder="Enter the identification number"
+              />
+            </div>
+            <!--div-4-->
+            <div>
+              <label>Blood Group</label>
+              <!--Validation Error-->
+              <label
+                class="validation-error hide"
+                id="bloodGroupvalidationError"
+                >This field is required</label
+              >
+              <!--Input Blood Group-->
+              <input
+                type="text"
+                name="bloodGroup"
+                id="bloodGroup"
+                placeholder="Enter the Patient blood group"
+              />
+            </div>
+            <!--div-5-->
+            <div>
+              <label>Medical Record</label>
+              <!--Validation Error-->
+              <label class="validation-error hide" id="medRecordvalidationError"
+                >This field is required</label
+              >
+              <!--Input Total Course-->
+              <input
+                type="text"
+                name="medRecord"
+                id="medRecord"
+                placeholder="Enter the Patient medical record"
+              />
+            </div>
+            <!--div-6-->
+            <div>
+              <label>Guardian Contact Information</label>
+              <!--Validation Error-->
+              <label
+                class="validation-error hide"
+                id="contactInfovalidationError"
+                >This field is required</label
+              >
+              <!--Input Guardian Contact Info-->
+              <input
+                type="text"
+                name="contactInfo"
+                id="contactInfo"
+                placeholder="Enter the patient's guardian info"
+              />
+            </div>
+            <!--div-7-->
+            <div class="form-action-buttons">
+              <!--Input Button-->
+              <input type="submit" value="Submit" />
+            </div>
+          </form>
+        </td>
+        <!--Column-2-->
+        <td>
+          <!--Nested Table-->
+          <table
+            class="list"
+            id="patientlist"
+            style="background-color: rgb(134, 92, 92)"
+          >
+            <!--Table Head-->
+            <thead>
+              <!--Row-2-->
+              <tr>
+                <th>Patient Name</th>
+                <th>Age</th>
+                <th>ID Number</th>
+                <th>Blood Group</th>
+                <th>Medical Record</th>
+                <th>Guardian Contact Info</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <!--Table Body-->
+            <tbody></tbody>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <!-- JS File-->
+    <script src="script.js"></script>
+  </body>
+</html>
